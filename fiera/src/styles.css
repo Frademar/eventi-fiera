@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* stile arcade cabinet machine */
+.jacquard {
+    font-family: "Jacquard 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.yeseva{
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+/* HOME-PAGE COMPONENT */
+
+.back-cust-home{
+    background-image: url(https://cdn.pixabay.com/photo/2020/04/01/12/46/city-4991094_1280.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.vh-75{
+    height:75vh;
+}
+.vaniglia{
+    color:#ECE4B7;
+}
+.space{
+    color:#2d3047;
+}
+
+.back-black{
+    background-color: black;
+    color:#ECE4B7;
+    transition:0.5s;
+}
+
+.back-black:hover{
+    background-color: #ECE4B7;
+    color: black;
+}
+
+.hue-rotate{
+    background: linear-gradient(90deg, rgba(0,255,214,1) 0%, rgba(255,0,215,1) 100%);
+    animation: hue infinite linear 5s;
+    /* filter:  hue-rotate(100deg); */
+}
+
+@keyframes hue {
+    0%{
+        filter: hue-rotate(250deg) blur(10px) saturate(200%);
+    }
+    50%{
+        filter: hue-rotate(360deg) blur(10px) saturate(200%);
+    }
+    100%{
+        filter: hue-rotate(250deg) blur(10px) saturate(200%);
+    }
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.cursor-pointer{
+    cursor:pointer;
+}
+
+/* NAVBAR */
+
+.transition-05{
+    transition:0.5s;
+}
+
+.box-shadow-inset{
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow:0px 15px 10px rgb(0, 0, 0, 0.6);
+    transition:0.5s;
+    top:0px;
+}
+
+.navbar-scroll{
+    background-color: #38405F;
+    height:80px;
+    transition:0.5s;
+    top:10px;
+    border-radius: 40px;
+    width: 80%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+
+
+.searching{
+    background-color: rgba(29, 29, 29, 0.5);
+    border:none;
+    border-bottom:solid 2px #ECE4B7;
+    color:#ECE4B7
+}
+
+.searching::placeholder{
+    color:#ECE4B7;
+}
+
+.searching:focus::placeholder{
+    color:#ece4b77c
+}
+
+.searching::-webkit-search-cancel-button {
+    display: none;
+  }

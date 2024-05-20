@@ -1,0 +1,43 @@
+<header class="container-fluid back-cust-home vh-75 ">
+    <section class="row h-100">
+      <article class="col-6 h-100 d-flex justify-content-center align-items-center text-center">
+        <h1 class="yeseva vaniglia display-1">Cerca lo stand che fa al caso tuo!!</h1>
+      </article>
+      <article class="col-6 h-100 d-flex justify-content-center align-items-center text-center">
+        <div class="position-relative">
+          <button class="p-2 back-black position-relative ubuntu px-5 border border-black fs-5 z-1">Padiglioni</button>
+          <div class="position-absolute top-0 h-100 w-100 bg-primary hue-rotate z-0"></div>
+        </div>
+      </article>
+    </section>
+  </header>
+  <article class="container-fluid">
+    <section class="row">
+        <article class="col-2" *ngFor="let fiera of listaFiere; let i = index">
+          <div class="rounded-top card">
+            <img src="{{fiera.immagine}}" alt="{{fiera.nome}}" class="w-100 rounded-top">
+            <span class="card-header mark p-0">
+              <h5 class="ubuntu fw-normal text-center card-title my-1 py-2">{{fiera.nome}}</h5>
+            </span>
+            <div class="card-body">
+              <p class="text-muted fst-italic opacity-75 float-end card-subtitle">{{fiera.categoria}}</p>
+              <p class="d-inline ubuntu fw-normal card-subtitle text-muted fst-italic ">Descrizione:</p>
+              <p class="m-0 card-text ubuntu text-justify text-truncate">{{fiera.descrizione}}</p>
+              <a class="d-block cursor-pointer link-info link-underline link-underline-opacity-0 link-underline-opacity-100-hover  text-info my-2" (click)="open(i)">Scopri di più</a>
+              <span class="d-flex justify-content-start">
+                <p class="d-inline fw-normal text-muted fst-italic ubuntu">Prezzo: </p>
+                <p class="card-text ms-4 ubuntu fst-italic">{{fiera.prezzo}}€</p>
+              </span>
+              <span class="d-flex justify-content-start">
+                <p class="d-inline fw-normal text-muted fst-italic ubuntu">Data: </p>
+                <p class="card-text ms-4 ubuntu fst-italic">{{fiera.data}}</p>
+              </span>
+              <span class="d-flex justify-content-start">
+                <p class="d-inline fw-normal text-muted fst-italic ubuntu">Ubicato presso: </p>
+                <p class="card-text ms-4 ubuntu fst-italic">{{fiera.luogo}}</p>
+              </span>
+            </div>
+          </div>
+        </article>
+    </section> 
+  </article>
